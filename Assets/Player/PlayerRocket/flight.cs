@@ -6,27 +6,35 @@ using UnityEngine;
 public class flight : MonoBehaviour
 {
     //movement
-    public float forwardSpeed = 10f;
+    public float forwardSpeed;
     Rigidbody2D RocketBody;
+    public float MaxSpeed;
 
     //mouse pull code
     private Vector2 currMousePosition;
     private Vector2 currentForwardVector;
     private Quaternion endRotation;
     private Vector2 newForwardVector;
-    public float mousePullStrength = 100f;
+    public float mousePullStrength;
     
     // Start is called before the first frame update
     void Start()
     {
-        RocketBody= GetComponent<Rigidbody2D>();
+        RocketBody = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        //moving forwardss
-        RocketBody.transform.position += transform.up * forwardSpeed * Time.deltaTime;
+        //moving forwards
+        RocketBody.velocity += new Vector2(transform.up.x, transform.up.y)  * forwardSpeed * Time.deltaTime;
         currMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        Debug.Log(RocketBody.velocity.magnitude);
+        //cap speed
+        if(RocketBody.velocity.magnitude > MaxSpeed)
+        {
+            RocketBody.velocity = RocketBody.velocity.normalized * MaxSpeed;
+        }
     }
 
     void FixedUpdate()
