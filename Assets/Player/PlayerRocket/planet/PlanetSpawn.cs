@@ -16,10 +16,11 @@ public class PlanetSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    if (spritePick == 3)
+        if (spritePick == 3)
         {
             gameObject.tag = "killer";
         }
+
         Sprite[] planetSprites = new Sprite[] { planet1, planet2, planet3, planet4 };
         GetComponent<SpriteRenderer>().sprite = planetSprites[spritePick];
         transform.localScale = new Vector2(planetSize, planetSize);

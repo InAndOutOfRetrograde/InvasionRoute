@@ -26,7 +26,7 @@ public class flight : MonoBehaviour
         fuelSecondsRemaining = maxFuelSeconds;
 
         print("SETTING VELOCITY IN START");
-        //Launch(new Vector2(transform.up.x, transform.up.y) * launchSpeed);
+        Launch(new Vector2(transform.up.x, transform.up.y) * launchSpeed);
     }
 
     private void Update()

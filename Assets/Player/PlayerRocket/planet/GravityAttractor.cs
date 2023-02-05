@@ -33,6 +33,8 @@ public class GravityAttractor : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        print("hit " + collision.gameObject.name);
+
         if (collision.gameObject.GetComponent<GravityAttracted>())
         {
             gravityAttractedRBs.Add(collision.gameObject.GetComponent<Rigidbody2D>());
@@ -41,6 +43,8 @@ public class GravityAttractor : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        print("something exited");
+
         if (collision.gameObject.GetComponent<GravityAttracted>())
         {
             gravityAttractedRBs.Remove(collision.gameObject.GetComponent<Rigidbody2D>());
