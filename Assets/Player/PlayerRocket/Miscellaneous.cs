@@ -6,9 +6,7 @@ public class Miscellaneous : MonoBehaviour
 {
     public void DestroyMe()
     {
-        {
-            Destroy(gameObject);
-        }
+        Destroy(this.gameObject);
     }
     // Start is called before the first frame update
     void Start()

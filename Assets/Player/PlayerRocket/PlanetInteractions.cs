@@ -18,7 +18,7 @@ public class PlanetInteractions: MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         
         //Check for a match with the specified name on any GameObject that collides with your GameObject

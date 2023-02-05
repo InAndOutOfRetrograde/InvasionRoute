@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 2379151927289108513}
   - component: {fileID: 1088360798354540097}
   - component: {fileID: 69941445}
+  - component: {fileID: 989804381242176606}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Untagged
@@ -113,6 +114,7 @@ MonoBehaviour:
   planet2: {fileID: 21300000, guid: 92cd10ba9f459ed4a8f512063fb3f4e4, type: 3}
   planet3: {fileID: 21300000, guid: a5f36677e7c5e5c46aba048575f4a372, type: 3}
   planet4: {fileID: 21300000, guid: e0c5824b28b15e94fbc53713418f9756, type: 3}
+  spritePick: 0
   planetSize: 0.05
 --- !u!212 &1088360798354540097
 SpriteRenderer:
@@ -182,3 +184,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &989804381242176606
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4085209014599678620}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

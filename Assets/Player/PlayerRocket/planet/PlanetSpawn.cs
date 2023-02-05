@@ -11,28 +11,27 @@ public class PlanetSpawn : MonoBehaviour
     [SerializeField] Sprite planet3;
     [SerializeField] Sprite planet4;
 
+    public int spritePick;
     public float planetSize;
-
-    int randomNum = 0;
     // Start is called before the first frame update
     void Start()
     {
-        randomNum = Random.Range(0, 3);
-        if (randomNum > 2)
+        if (spritePick > 2)
         {
 
         }
-        else
+        else if (spritePick == 3)
         {
-            tag = "killer";
+            gameObject.tag = "killer";
         }
         Sprite[] planetSprites = new Sprite[] { planet1, planet2, planet3, planet4 };
-        GetComponent<SpriteRenderer>().sprite = planetSprites[randomNum];
+        GetComponent<SpriteRenderer>().sprite = planetSprites[spritePick];
         transform.localScale = new Vector2(planetSize, planetSize);
 
         // Update is called once per frame
         void Update()
         {
+
         }
     }
 }
