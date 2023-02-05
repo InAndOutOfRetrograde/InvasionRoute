@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 69941445, guid: f3fa044037592534caf1a738bc914179, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379151927289108513, guid: f3fa044037592534caf1a738bc914179, type: 3}
+      propertyPath: spritePick
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4085209014599678620, guid: f3fa044037592534caf1a738bc914179, type: 3}
       propertyPath: m_Name
       value: Planet
@@ -140,11 +148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7722475785456458226, guid: f3fa044037592534caf1a738bc914179, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.920102
+      value: -2.88
       objectReference: {fileID: 0}
     - target: {fileID: 7722475785456458226, guid: f3fa044037592534caf1a738bc914179, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.05683008
+      value: 1.54
       objectReference: {fileID: 0}
     - target: {fileID: 7722475785456458226, guid: f3fa044037592534caf1a738bc914179, type: 3}
       propertyPath: m_LocalPosition.z
@@ -191,9 +199,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerRocket
       objectReference: {fileID: 0}
+    - target: {fileID: 1626693892419433963, guid: 42418ac4c725702478fc6798fbc8ecd8, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3360592297331424791, guid: 42418ac4c725702478fc6798fbc8ecd8, type: 3}
       propertyPath: m_Radius
-      value: 4.36
+      value: 0.33909273
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360592297331424791, guid: 42418ac4c725702478fc6798fbc8ecd8, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.040567875
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360592297331424791, guid: 42418ac4c725702478fc6798fbc8ecd8, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.03247118
       objectReference: {fileID: 0}
     - target: {fileID: 5851806996781269876, guid: 42418ac4c725702478fc6798fbc8ecd8, type: 3}
       propertyPath: m_RootOrder

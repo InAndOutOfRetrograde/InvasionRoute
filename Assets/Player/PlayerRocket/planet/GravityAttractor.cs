@@ -26,7 +26,6 @@ public class GravityAttractor : MonoBehaviour
             float distBetweenUs = Vector2.Distance(myPos2D, otherPos2D);
             float linearPullPercent = Mathf.Clamp01((myTrueGravityRadius - distBetweenUs) / myTrueGravityRadius);
             float linearPullPercentSquared = Mathf.Pow(linearPullPercent, 2f);
-            print(linearPullPercent);
 
             thisRB.velocity = thisRB.velocity + (myPos2D - otherPos2D).normalized * linearPullPercentSquared;
         }
