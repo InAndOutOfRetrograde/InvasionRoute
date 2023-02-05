@@ -13,9 +13,12 @@ public class PlanetSpawn : MonoBehaviour
 
     public int spritePick;
     public float planetSize;
+    float planetCollideSize;
+
     // Start is called before the first frame update
     void Start()
     {
+        planetCollideSize = planetSize * 3;
         if (spritePick == 3)
         {
             gameObject.tag = "killer";
@@ -24,12 +27,6 @@ public class PlanetSpawn : MonoBehaviour
         Sprite[] planetSprites = new Sprite[] { planet1, planet2, planet3, planet4 };
         GetComponent<SpriteRenderer>().sprite = planetSprites[spritePick];
         transform.localScale = new Vector2(planetSize, planetSize);
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (gameObject.tag == "killer")
-        {
-            Destroy(gameObject);
-        }
+        transform.parent.GetChild(0).localScale = new Vector2(planetCollideSize,planetCollideSize);
     }
 }

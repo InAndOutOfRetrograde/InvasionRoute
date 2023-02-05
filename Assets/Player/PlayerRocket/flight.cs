@@ -31,7 +31,7 @@ public class flight : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             GetComponent<Splitrocket>().Split();
         }

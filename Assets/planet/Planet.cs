@@ -21,12 +21,17 @@ public class Planet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (gameObject.tag == "killer")
+        {
+            Destroy(collision.gameObject);
+        }
         flight flightScript = collision.gameObject.GetComponent<flight>();
 
         if (flightScript != null)
         {
             hasBeenHit = true;
             flightScript.AddFuel(amtOfFuelToAdd);
+            FindObjectOfType<GameManage>().AddPoint();
         }
     }
 }
