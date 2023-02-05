@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.UIElements;
 
 public class PlanetSpawn : MonoBehaviour
 {
@@ -10,26 +11,27 @@ public class PlanetSpawn : MonoBehaviour
     [SerializeField] Sprite planet3;
     [SerializeField] Sprite planet4;
 
-    int randomNum = 0;
+    public int spritePick;
+    public float planetSize;
     // Start is called before the first frame update
     void Start()
     {
-        randomNum = Random.Range(0, 3);
-        if(randomNum > 2)
+        if (spritePick > 2)
         {
-            
+
         }
-        else
+        else if (spritePick == 3)
         {
-            tag = "killer";
+            gameObject.tag = "killer";
         }
         Sprite[] planetSprites = new Sprite[] { planet1, planet2, planet3, planet4 };
-        GetComponent<SpriteRenderer>().sprite = planetSprites[randomNum];
-    }
+        GetComponent<SpriteRenderer>().sprite = planetSprites[spritePick];
+        transform.localScale = new Vector2(planetSize, planetSize);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }
