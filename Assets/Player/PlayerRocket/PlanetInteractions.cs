@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class PlanetInteractions: MonoBehaviour
 {
-    void DestroyMe()
-    {
-        {
-            Destroy(gameObject);
-        }
-    }
+   
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +24,7 @@ public class PlanetInteractions: MonoBehaviour
         //Check for a match with the specified name on any GameObject that collides with your GameObject
         if (collision.gameObject.tag == "killer")
         {
-            DestroyMe();
+            GetComponent<Miscellaneous>().DestroyMe();
         }
         if (collision.gameObject.tag == "bounce")
         {
