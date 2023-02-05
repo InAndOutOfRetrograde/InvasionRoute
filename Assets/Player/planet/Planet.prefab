@@ -113,6 +113,7 @@ MonoBehaviour:
   planet2: {fileID: 21300000, guid: 92cd10ba9f459ed4a8f512063fb3f4e4, type: 3}
   planet3: {fileID: 21300000, guid: a5f36677e7c5e5c46aba048575f4a372, type: 3}
   planet4: {fileID: 21300000, guid: e0c5824b28b15e94fbc53713418f9756, type: 3}
+  planetSize: 0.05
 --- !u!212 &1088360798354540097
 SpriteRenderer:
   m_ObjectHideFlags: 0
