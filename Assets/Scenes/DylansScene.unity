@@ -380,7 +380,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.4, y: -1.4, z: -16.302294}
+  m_LocalPosition: {x: -63.028324, y: 21.924908, z: -11.166259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -932,24 +932,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1406660131 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4085209014599678620, guid: f3fa044037592534caf1a738bc914179, type: 3}
-  m_PrefabInstance: {fileID: 1863280492}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1406660137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406660131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f89e5946c31f7842bd4317ac365812e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amtOfFuelToAdd: 0
 --- !u!1 &1520984106
 GameObject:
   m_ObjectHideFlags: 3
@@ -1166,14 +1148,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1241356411075444802, guid: f3fa044037592534caf1a738bc914179, type: 3}
-      propertyPath: spritePick
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1241356411075444802, guid: f3fa044037592534caf1a738bc914179, type: 3}
-      propertyPath: planetCollideSize
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 4085209014599678620, guid: f3fa044037592534caf1a738bc914179, type: 3}
       propertyPath: m_Name
       value: Planet (3)

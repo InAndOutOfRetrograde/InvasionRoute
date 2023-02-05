@@ -48,7 +48,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.0024331212}
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 20
 --- !u!114 &3174593242566682657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
   planet2: {fileID: 21300000, guid: 92cd10ba9f459ed4a8f512063fb3f4e4, type: 3}
   planet3: {fileID: 21300000, guid: a5f36677e7c5e5c46aba048575f4a372, type: 3}
   planet4: {fileID: 21300000, guid: e0c5824b28b15e94fbc53713418f9756, type: 3}
-  spritePick: 1
+  spritePick: 3
   planetSize: 0.4
 --- !u!212 &6068241839405753791
 SpriteRenderer:
@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 7722475785456458226}
   - component: {fileID: 69941445}
   - component: {fileID: 989804381242176606}
+  - component: {fileID: 1406660137}
   m_Layer: 0
   m_Name: Planet
   m_TagString: diggable
@@ -213,9 +214,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 1.49}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 11.12
 --- !u!50 &989804381242176606
 Rigidbody2D:
   serializedVersion: 4
@@ -237,3 +238,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1406660137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4085209014599678620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f89e5946c31f7842bd4317ac365812e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amtOfFuelToAdd: 0
