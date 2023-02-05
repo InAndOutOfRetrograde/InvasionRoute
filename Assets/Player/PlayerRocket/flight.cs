@@ -16,11 +16,14 @@ public class flight : MonoBehaviour
     private Quaternion endRotation;
     private Vector2 newForwardVector;
     public float mousePullStrength;
+    float maxFuelSeconds = 5f;
+    float fuelSecondsRemaining;
     
     // Start is called before the first frame update
     void Start()
     {
         RocketBody = GetComponent<Rigidbody2D>();
+        fuelSecondsRemaining = maxFuelSeconds;
 
         print("SETTING VELOCITY IN START");
         //Launch(new Vector2(transform.up.x, transform.up.y) * launchSpeed);
@@ -36,30 +39,28 @@ public class flight : MonoBehaviour
 
     void FixedUpdate()
     {
-        ////turning code
-        currentForwardVector = transform.rotation * Vector3.up;
-
-        // Rotation code
-        Vector2 moveVec = RocketBody.velocity.normalized;
-        if (moveVec != Vector2.zero)
+        fuelSecondsRemaining -= Time.fixedDeltaTime;
+        if (fuelSecondsRemaining <= 0f)
         {
-            transform.rotation = Quaternion.LookRotation(moveVec, Vector3.back);
-            transform.Rotate(Vector3.right, 90f, Space.Self);
+
         }
-
-
-        ///*endRotation = Quaternion.FromToRotation(Vector3.up, new Vector3(currMousePosition.x, currMousePosition.y, 0) - transform.position);
-        //transform.rotation = Quaternion.RotateTowards(transform.rotation, endRotation, Time.deltaTime * mousePullStrength);*/
-
-        ////moving forwards
-        ////RocketBody.velocity += new Vector2(transform.up.x, transform.up.y) * forwardSpeed * Time.deltaTime;
-        ////currMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        ////Debug.Log(RocketBody.velocity.magnitude);
-        ////cap speed
-        if (RocketBody.velocity.magnitude > MaxSpeed)
+        else
         {
-            RocketBody.velocity = RocketBody.velocity.normalized * MaxSpeed;
+            //turning code
+            currentForwardVector = transform.rotation * Vector3.up;
+
+            // Rotation code
+            Vector2 moveVec = RocketBody.velocity.normalized;
+            if (moveVec != Vector2.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(moveVec, Vector3.back);
+                transform.Rotate(Vector3.right, 90f, Space.Self);
+            }
+
+            if (RocketBody.velocity.magnitude > MaxSpeed)
+            {
+                RocketBody.velocity = RocketBody.velocity.normalized * MaxSpeed;
+            }
         }
     }
 
@@ -67,5 +68,10 @@ public class flight : MonoBehaviour
     public void Launch(Vector2 inVelocity)
     {
         RocketBody.velocity = inVelocity;
+    }
+
+    public void AddFuel(float inTimeToAdd)
+    {
+        fuelSecondsRemaining = Mathf.Clamp(fuelSecondsRemaining + inTimeToAdd, 0f, maxFuelSeconds);
     }
 }

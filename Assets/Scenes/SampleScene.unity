@@ -134,10 +134,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet
       objectReference: {fileID: 0}
-    - target: {fileID: 4085209014599678620, guid: f3fa044037592534caf1a738bc914179, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7722475785456458226, guid: f3fa044037592534caf1a738bc914179, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -184,6 +180,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3fa044037592534caf1a738bc914179, type: 3}
+--- !u!1 &69941444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4085209014599678620, guid: f3fa044037592534caf1a738bc914179, type: 3}
+  m_PrefabInstance: {fileID: 69941443}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &69941445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69941444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f89e5946c31f7842bd4317ac365812e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amtOfFuelToAdd: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

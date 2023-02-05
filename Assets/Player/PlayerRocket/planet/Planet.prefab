@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 989804381242176606}
   m_Layer: 0
   m_Name: Planet
-  m_TagString: Untagged
+  m_TagString: diggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

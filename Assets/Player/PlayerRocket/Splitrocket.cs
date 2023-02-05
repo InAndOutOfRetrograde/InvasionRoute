@@ -26,10 +26,6 @@ public class Splitrocket : MonoBehaviour
             GameObject dupliRocket = GameObject.Instantiate(Rocket, transform.position, transform.rotation);
             dupliRocket.GetComponent<Splitrocket>().duplicationAmount -= 1;
             duplicationAmount -= 1;
-            //Rigidbody2D dupliRocketRB = DupliRocket.GetComponent<Rigidbody2D>();
-            //print("Setting the velocity in SplitRocket");
-            //dupliRocketRB.velocity = Rotate(RocketBody.velocity, -90f);
-            if (dupliRocket.GetComponent<flight>()) print("FOUND!!!!!!!!!!!!!!");
             dupliRocket.GetComponent<Rigidbody2D>().velocity = (Rotate(RocketBody.velocity, -90f));
         }
     }
