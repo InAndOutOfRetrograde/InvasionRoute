@@ -22,7 +22,8 @@ public class flight : MonoBehaviour
     {
         RocketBody = GetComponent<Rigidbody2D>();
 
-        RocketBody.velocity = new Vector2(transform.up.x, transform.up.y) * launchSpeed;
+        print("SETTING VELOCITY IN START");
+        //Launch(new Vector2(transform.up.x, transform.up.y) * launchSpeed);
     }
 
     private void Update()
@@ -60,6 +61,11 @@ public class flight : MonoBehaviour
         {
             RocketBody.velocity = RocketBody.velocity.normalized * MaxSpeed;
         }
+    }
 
+
+    public void Launch(Vector2 inVelocity)
+    {
+        RocketBody.velocity = inVelocity;
     }
 }
